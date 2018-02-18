@@ -4,14 +4,17 @@ Self-Driving Car Engineer Nanodegree Program
 
 PID controler
 
-* Proportional (P)
-   In proportional only mode, the controller simply multiplies the Error by the proportional Gain (Kp) to get the controller output. The proportional only mode result in a offset error. 
-   Youtube Video: http://youtu.be/KxxctAHKREg
+* P control
+   In proportional only mode, the controller multiplies the Error by the proportional Gain (Kp). The proportional only mode result in overshoot (offset error). 
+   Youtube Video: https://www.youtube.com/watch?v=KxxctAHKREg
  
-* Integral (I)
+* PD control 
+   The overshoot issue can be solved by derivative action, which multiplies the current change of error. For example, the derivative action notice that the error become small and reduce the steer value.
+   Youtube Video: https://www.youtube.com/watch?v=tMzL6vZf_DI
 
-* Derivative (D)
-
+* PID control 
+   The integral in a PID controller is the sum of the instantaneous error over time and gives the accumulated offset that should have been corrected previously (e.g. Systematic Bias). 
+   Youtube Video:  https://www.youtube.com/watch?v=LxmRfxEIrAI
 
 ## Dependencies
 
