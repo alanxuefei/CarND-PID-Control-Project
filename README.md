@@ -1,7 +1,17 @@
 # CarND-Controls-PID
 Self-Driving Car Engineer Nanodegree Program
-
 ---
+
+PID controler
+
+* Proportional (P)
+   In proportional only mode, the controller simply multiplies the Error by the proportional Gain (Kp) to get the controller output. The proportional only mode result in a offset error. 
+   Youtube Video: http://youtu.be/KxxctAHKREg
+ 
+* Integral (I)
+
+* Derivative (D)
+
 
 ## Dependencies
 
