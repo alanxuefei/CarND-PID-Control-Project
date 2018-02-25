@@ -12,7 +12,9 @@ The D-Controller outputs a correction by multipling the current change of Error.
 
 The I-Controller outputs a correction by accumulating the previous errors. The integral is the sum of the instantaneous error over time and gives the accumulated offset that should have been corrected previously (e.g. Systematic Bias).
 
-[image1]: ./pid.png "PID"       
+[//]: # (Image References) 
+[image1]: ./pid.png "PID" 
+![alt text][image1]
 
 # Tuning of parameters
 
