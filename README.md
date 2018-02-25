@@ -2,18 +2,33 @@
 Self-Driving Car Engineer Nanodegree Program
 ---
 
-PID controler
+# PID controler
 
-* P control
-   In proportional only mode, the controller multiplies the Error by the proportional Gain (Kp). The proportional only mode result in overshoot (offset error). 
+In 1922, a engineer Nicolas Minorsky noted the helmsman steered the ship based not only on the current course error (Proportional), but also on past error (Integral), as well as the current rate of change (Derivative). After trials, the performance of PID control is better than most helmsman.
+
+The P-Controller outputs a correction by multipling the Error with the proportional Gain. The main problem of the P-Controller is that it tends to overshoot. 
+
+The D-Controller outputs a correction by multipling the current change of Error. the correction reacts to fast changing errors. input signals. Combining the P-Controller with the D-Controller can help solve the overshooting problem.
+
+The I-Controller outputs a correction by accumulating the previous errors. The integral is the sum of the instantaneous error over time and gives the accumulated offset that should have been corrected previously (e.g. Systematic Bias). 
+
+# Tuning of parameters
+
+  The parameters presented along Sebastian Thrun's PID class were used as start point. Then these parameters are turned manually based on the offset errors. 
+
+Step 1, I started with the P control. 
+  * P control 
+   The proportional only mode result in overshoot (offset error). 
    Youtube Video: https://www.youtube.com/watch?v=KxxctAHKREg
  
-* PD control 
+Step2, Then I add the D control. 
+  * PD control 
    The overshoot issue can be solved by derivative action, which multiplies the current change of error. For example, the derivative action notice that the error become small and reduce the steer value.
    Youtube Video: https://www.youtube.com/watch?v=tMzL6vZf_DI
 
-* PID control 
-   The integral in a PID controller is the sum of the instantaneous error over time and gives the accumulated offset that should have been corrected previously (e.g. Systematic Bias). 
+Step3, Finally I add the I control.
+  * PID control 
+   The integral in a PID controller is the sum of the instantaneous error over time and gives the accumulated offset that should have been corrected previously (e.g. Systematic Bias). In this case, the effect of the I controler is very low.  
    Youtube Video:  https://www.youtube.com/watch?v=LxmRfxEIrAI
 
 ## Dependencies
