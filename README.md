@@ -10,7 +10,9 @@ The P-Controller outputs a correction by multipling the Error with the proportio
 
 The D-Controller outputs a correction by multipling the current change of Error. the correction reacts to fast changing errors. input signals. Combining the P-Controller with the D-Controller can help solve the overshooting problem.
 
-The I-Controller outputs a correction by accumulating the previous errors. The integral is the sum of the instantaneous error over time and gives the accumulated offset that should have been corrected previously (e.g. Systematic Bias). 
+The I-Controller outputs a correction by accumulating the previous errors. The integral is the sum of the instantaneous error over time and gives the accumulated offset that should have been corrected previously (e.g. Systematic Bias).
+
+[image1]: ./images/pid.png "PID"       
 
 # Tuning of parameters
 
@@ -18,18 +20,18 @@ The I-Controller outputs a correction by accumulating the previous errors. The i
 
 Step 1, I started with the P control. 
   * P control 
-   The proportional only mode result in overshoot (offset error). 
-   Youtube Video: https://www.youtube.com/watch?v=KxxctAHKREg
+   The proportional only mode result in overshoot (offset error).   
+       Youtube Video: https://www.youtube.com/watch?v=KxxctAHKREg
  
 Step2, Then I add the D control. 
   * PD control 
-   The overshoot issue can be solved by derivative action, which multiplies the current change of error. For example, the derivative action notice that the error become small and reduce the steer value.
-   Youtube Video: https://www.youtube.com/watch?v=tMzL6vZf_DI
+   The overshoot issue can be solved by derivative action, which multiplies the current change of error. For example, the derivative action notice that the error become small and reduce the steer value.   
+       Youtube Video: https://www.youtube.com/watch?v=tMzL6vZf_DI
 
 Step3, Finally I add the I control.
   * PID control 
-   The integral in a PID controller is the sum of the instantaneous error over time and gives the accumulated offset that should have been corrected previously (e.g. Systematic Bias). In this case, the effect of the I controler is very low.  
-   Youtube Video:  https://www.youtube.com/watch?v=LxmRfxEIrAI
+   The integral in a PID controller is the sum of the instantaneous error over time and gives the accumulated offset that should have been corrected previously (e.g. Systematic Bias). In this case, the effect of the I controler is very low.
+       Youtube Video:  https://www.youtube.com/watch?v=LxmRfxEIrAI
 
 ## Dependencies
 
